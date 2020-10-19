@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="content">
+        <div>
+            <form >
+                <label for="fname">Nom d'utilisateur :</label>
+                <input type="text" id="fname" name="fname" placeholder="Nom d'utilisateur"><br>
+                <label for="password">Adresse éléctronique :</label>
+                <input type="password" id="password" name="password" placeholder="Mot de passe"><br>
+                <label for="country">Country :</label>
+                <select name="Pays" id="country" > 
+                    <option value="Bénin">Bénin</option>
+                    <option value="Nigeria">Nigéria</option>
+                    <option value="CI">CI</option>
+                </select> <br>
+                <input type="submit" name="submit" class="submit">
+            </form>
+        </div>
+       
+        <div>
+            <h2>Barre de recherche</h2>
+            <label for="serach bar ">Recherhcer</label>
+            <input type="text" id="search" name="Recherhcer" class="searchbar">
+        </div>
+        
+        <div>
+            <button class="dropBtn">Dropdown</button>
+            <div class="drowpdown"></div>
+        </div>
+
+    </div> -->
+
+
+    <div class="btn">
+        <span class="fas fa-bars"></span>
+    </div>
+    <nav class="sidebar">
+        <div class="text">Sidebar Menu</div>
+        <ul>
+            <li class="active"><a href="#">Dashboard</a></li>
+            <li>
+                <a href="#" class="feat-btn">Features
+                    <span class="fas fa-caret-down first"></span>
+                </a>
+                <ul>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Elements</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Services
+                    <span class="fas fa-caret-down first"></span>
+                </a>
+                <ul class="serv-show">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">App Design</a></li>
+                </ul>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Shortcuts</a></li>
+                <li><a href="#">Feedback</a></li>
+            
+            </li>
+
+        </ul>
+    </nav>
+
+    <script>
+      $('.btn').click(function(){
+      $(this).toggleClass("click");
+      $('.sidebar').toggleClass("show");
+    });
+      $('.feat-btn').click(function(){
+        $('nav ul .feat-show').toggleClass("show");
+        $('nav ul .first').toggleClass("rotate");
+      });
+      $('.serv-btn').click(function(){
+        $('nav ul .serv-show').toggleClass("show1");
+        $('nav ul .second').toggleClass("rotate");
+      });
+      $('nav ul li').click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+      });
+    </script>
+  
+</body>
+</html>
